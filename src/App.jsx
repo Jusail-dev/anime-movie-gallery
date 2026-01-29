@@ -51,7 +51,7 @@ function App() {
         await new Promise(r => setTimeout(r, 500))
 
         const response = await api.get(
-          `/anime?genres=${generId}&limit=10`
+          `/anime?genres=${generId}&limit=6`
         )
 
         data[generId] = response.data.data
