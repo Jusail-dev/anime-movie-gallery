@@ -7,7 +7,7 @@ import Watchlist from './components/WatchList/Wathlist'
 import api from './api/api'
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("watchlist")
+  const [currentPage, setCurrentPage] = useState("home")
   const [animeByGenre, setAnimeByGenre] = useState({})
   const generes = [
     {

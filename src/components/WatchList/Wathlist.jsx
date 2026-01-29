@@ -8,8 +8,6 @@ const Watchlist = ({ watchlistState }) => {
     const [watchlist, setWatchlist] = watchlistState
     const [animes, setAnimes] = useState([])
 
-
-
     useEffect(() => {
         const fetchWithDelay = async () => {
             const result = [];
@@ -30,9 +28,6 @@ const Watchlist = ({ watchlistState }) => {
 
     }, [watchlist])
 
-    useEffect(() => {
-        console.log(animes)
-    }, [animes])
     return (
 
         <div className="watchlist-container">
