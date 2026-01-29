@@ -1,10 +1,11 @@
-import { useState, useEffect, use } from 'react'
+import { useState, useEffect } from 'react'
 import './featuredanime.css'
 import api from '../../api/api'
 
 const FeaturedAnime = ({ watchlistState }) => {
     const [featuredAnimeData, setFeaturedAnimeData] = useState(null)
     const [watchlist, setWatchlist] = watchlistState
+
 
     function AddToWatchtlist() {
         if (featuredAnimeData?.mal_id) {
@@ -25,12 +26,6 @@ const FeaturedAnime = ({ watchlistState }) => {
 
 
     }, [])
-
-    useEffect(() => {
-        console.log("id ==", featuredAnimeData?.mal_id ? "IS not " : "Un")
-    }
-        , [featuredAnimeData])
-
 
     const divStyle = {
         backgroundImage: `url(${featuredAnimeData?.images?.jpg?.large_image_url || ""})`,
