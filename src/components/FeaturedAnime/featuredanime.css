@@ -1,0 +1,89 @@
+.featuredanime-container {
+    /* position: relative; */
+    width: 100%;
+    height: 80vh;
+    border: 4px solid black;
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    gap: 1rem;
+    padding: 1.5rem;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+.featuredanime-container h1 {
+    font-size: 1.5rem;
+}
+
+.episodes-rating {
+    display: flex;
+    gap: 1rem;
+}
+
+.episodes-rating div {
+    border: 3px solid black;
+    background-color: white;
+    padding: .4rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.watchlistbtn {
+    border: 3px solid black;
+    background-color: white;
+    padding: .7rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: bold;
+
+}
+
+.material-symbols-outlined {
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-variation-settings: 'FILL' 0;
+}
+
+.filled {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 100,
+        'opsz' 24;
+
+    color: black;
+}
+
+
+@media (max-width: 500px) {
+    .featuredanime-container {
+        height: 25rem;
+    }
+
+    .featuredanime-container h1 {
+        font-size: 1.2rem;
+    }
+
+    .watchlistbtn {
+        font-size: .7rem;
+    }
+
+    .episodes-rating div{
+        font-size: .7rem;
+    }
+}

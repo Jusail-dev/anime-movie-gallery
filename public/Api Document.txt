@@ -1,0 +1,14 @@
+jikan base url = https://api.jikan.moe/v4
+
+featured anime =    random/anime
+
+generes = /genres/anime
+
+anime by genres = /anime?genres=1
+
+https://api.jikan.moe/v4/anime?genres=1&limit=10
+
+
+
+
+linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
