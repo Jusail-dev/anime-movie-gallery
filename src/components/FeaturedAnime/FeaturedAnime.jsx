@@ -2,8 +2,17 @@ import { useState, useEffect, use } from 'react'
 import './featuredanime.css'
 import api from '../../api/api'
 
-const FeaturedAnime = () => {
+const FeaturedAnime = ({ watchlistState }) => {
     const [featuredAnimeData, setFeaturedAnimeData] = useState(null)
+    const [watchlist, setWatchlist] = watchlistState
+
+    function AddToWatchtlist() {
+        if (featuredAnimeData?.mal_id) {
+            if (!watchlist.includes(featuredAnimeData.mal_id)) {
+                setWatchlist(preList => [...preList, featuredAnimeData.mal_id])
+            }
+        }
+    }
 
     useEffect(() => {
         api.get("/random/anime")
@@ -16,6 +25,12 @@ const FeaturedAnime = () => {
 
 
     }, [])
+
+    useEffect(() => {
+        console.log("id ==", featuredAnimeData?.mal_id ? "IS not " : "Un")
+    }
+        , [featuredAnimeData])
+
 
     const divStyle = {
         backgroundImage: `url(${featuredAnimeData?.images?.jpg?.large_image_url || ""})`,
@@ -37,7 +52,9 @@ const FeaturedAnime = () => {
 
                 </div>
             </div>
-            <div className="watchlistbtn"> <i><span className="material-symbols-outlined">add</span></i>ADD TO WATCHLIST</div>
+            <div className="watchlistbtn"
+                onClick={() => { AddToWatchtlist() }}
+            > <i><span className="material-symbols-outlined">add</span></i>ADD TO WATCHLIST</div>
         </div>
     )
 }

@@ -69,7 +69,9 @@ function App() {
         <div className="main-container">
           {currentPage == "home" &&
             <>
-              <FeaturedAnime />
+              <FeaturedAnime 
+              watchlistState={[watchlist, setWatchlist]}
+              />
               {
                 generes !== null &&
                 generes.map((gener) => (
