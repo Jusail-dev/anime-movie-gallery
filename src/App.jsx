@@ -69,8 +69,8 @@ function App() {
         <div className="main-container">
           {currentPage == "home" &&
             <>
-              <FeaturedAnime 
-              watchlistState={[watchlist, setWatchlist]}
+              <FeaturedAnime
+                watchlistState={[watchlist, setWatchlist]}
               />
               {
                 generes !== null &&
@@ -85,8 +85,8 @@ function App() {
             </>
           }
           {currentPage == "watchlist" &&
-            <Watchlist 
-            watchlistState={[watchlist, setWatchlist]}
+            <Watchlist
+              watchlistState={[watchlist, setWatchlist]}
             />
           }
         </div>

@@ -8,13 +8,10 @@
     gap: 1rem;
 }
 
-/* .titles-container {
 
-} */
-
-.emptylist-container{
+.emptylist-container {
     width: 100%;
-    height:auto;
+    height: auto;
     min-height: 25rem;
 
     display: flex;
@@ -23,11 +20,11 @@
     box-sizing: border-box;
 }
 
-.emptylist{
+.emptylist {
     border: 3px solid black;
     width: 100%;
     max-width: 30rem;
-    height:auto;
+    height: auto;
     min-height: 25rem;
 
     display: flex;
@@ -37,17 +34,18 @@
     gap: .6rem;
 
 }
-.emptylist-container h1{
+
+.emptylist-container h1 {
     font-size: 5rem;
 }
-.emptylist-container h2{
+
+.emptylist-container h2 {
     font-size: x-large;
 }
-.emptylist-container p{
+
+.emptylist-container p {
     font-size: small;
 }
-
-
 
 
 .movies-container {
@@ -56,7 +54,7 @@
     flex-wrap: wrap;
     gap: 1rem;
 
-    justify-content: flex-start ;
+    justify-content: flex-start;
     align-items: flex-start;
 
     width: 100%;
@@ -65,16 +63,10 @@
 
 }
 
-
-
-
-
-
-
 .movie-A {
     display: flex;
     flex-direction: column;
-    flex: 0 0 12rem; 
+    flex: 0 0 12rem;
     height: fit-content;
     min-width: 12rem;
     max-width: 12rem;
@@ -107,17 +99,7 @@
     align-items: center;
     width: 100%;
 }
-/* 
-.poster-A .rating-A {
-    border: 2px solid black;
-    background-color: white;
-    padding: .1rem .3rem;
-    font-size: .7rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
+
 
 .poster-A .watchlistbtn-A {
     display: flex;
@@ -168,10 +150,3 @@
     color: rgb(255, 0, 0);
     font-size: 1.1rem;
 }
-
-
-/* @media (max-width: 500px) {
-    .movies-container{
-        justify-content: center ;
-    }
-} */

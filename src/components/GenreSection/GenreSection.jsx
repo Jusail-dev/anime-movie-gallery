@@ -11,11 +11,11 @@ const GenereSection = ({ titile, animes = [], watchlistState }) => {
             </div>
             <div className="movies-sec">
                 {animes.map((anime) => (
-                    <Movie key={anime.mal_id} 
-                    id={anime.mal_id} 
-                    url={anime.images.jpg.image_url} 
-                    title={anime.title} score={anime.score}
-                    watchlistState={watchlistState}
+                    <Movie key={anime.mal_id}
+                        id={anime.mal_id}
+                        url={anime.images.jpg.image_url}
+                        title={anime.title} score={anime.score}
+                        watchlistState={watchlistState}
                     />
                 ))}
 

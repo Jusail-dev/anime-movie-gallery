@@ -1,5 +1,4 @@
 .featuredanime-container {
-    /* position: relative; */
     width: 100%;
     height: 80vh;
     border: 4px solid black;
@@ -19,8 +18,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-
 
 .featuredanime-container h1 {
     font-size: 1.5rem;
@@ -83,7 +80,7 @@
         font-size: .7rem;
     }
 
-    .episodes-rating div{
+    .episodes-rating div {
         font-size: .7rem;
     }
 }
