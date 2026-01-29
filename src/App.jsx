@@ -7,7 +7,7 @@ import Watchlist from './components/WatchList/Wathlist'
 import api from './api/api'
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("home")
+  const [currentPage, setCurrentPage] = useState("watchlist")
   const [animeByGenre, setAnimeByGenre] = useState({})
   const generes = [
     {
@@ -85,7 +85,9 @@ function App() {
             </>
           }
           {currentPage == "watchlist" &&
-            <Watchlist />
+            <Watchlist 
+            watchlistState={[watchlist, setWatchlist]}
+            />
           }
         </div>
       </div>

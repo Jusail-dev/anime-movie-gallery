@@ -1,22 +1,27 @@
 import './watchlist.css'
 
-const Movie = () => {
+const Movie = ({ id, title, url, watchlistState }) => {
+
+    const [watchlist, setWatchlist] = watchlistState
+
+    function removeFromWatchList() {
+        setWatchlist(preList => preList.filter(idItem => idItem !== id))
+    }
+
     return (
         <div className="movie-A">
-            <div className="poster-A" style={{ backgroundImage: 'url(../../src/assets/aot.webp)' }}>
+            <div className="poster-A" style={{ backgroundImage: `url(${url})` }}>
                 <div className="top-A">
-                    <div className="watchlistbtn-A">
-                        <i><span className="material-symbols-outlined favorite">favorite</span></i>
+                    <div className="watchlistbtn-A"
+                        onClick={() => {
+                            removeFromWatchList()
+                        }}
+                    >
+                        <i><span className="material-symbols-outlined favorite-active">favorite</span></i>
                     </div>
                 </div>
-                <div className="button">
-                    {/* <div className="rating-A">
-                        <i><span className="material-symbols-outlined filled">star</span></i>
-                        <span>8.9</span>
-                    </div> */}
-                </div>
             </div>
-            <p>Attack On Titan</p>
+            <p>{title}</p>
         </div>
     )
 }
